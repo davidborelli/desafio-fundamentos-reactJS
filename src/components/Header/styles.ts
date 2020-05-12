@@ -34,3 +34,38 @@ export const Container = styled.div<ContainerProps>`
     }
   }
 `;
+
+export const Menu = styled.div`
+  display: flex;
+
+  > a {
+    position: relative;
+    padding: 10px 0;
+
+    &.active {
+      &::after {
+        content: '';
+        position: absolute;
+        background: #ff872c;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+`;
+
+export const MenuItem = styled.span`
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.8;
+
+  &:not(:first-child) {
+    margin-left: 32px;
+  }
+`;
